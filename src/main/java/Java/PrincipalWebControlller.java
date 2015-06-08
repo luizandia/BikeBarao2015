@@ -1,4 +1,4 @@
-package HelloWorldController;
+package Java;
 
 import java.util.List;
 
@@ -11,8 +11,16 @@ import org.springframework.web.servlet.ModelAndView;
 
  
 @Controller
-public class HelloWorldController {
-	@Autowired private PizzaDAO pizzaDAO;
+public class PrincipalWebControlller {
+	@Autowired private BicicletaDAO BicicletaDAO;
+	@Autowired private CartaoDAO CartaoDAO;
+	@Autowired private EstacaoDAO EstacaoDAO;
+	@Autowired private FornecedorDAO FornecedorDAO;
+	@Autowired private LocalizacaoDAO LocalizacaoDAO;
+	@Autowired private UsuarioDAO UsuarioDAO;
+	
+	
+	
 	String message = "Welcome to Spring MVC!";
  
 	@RequestMapping("/hello")
@@ -21,9 +29,8 @@ public class HelloWorldController {
 		System.out.println("in controller");
  
 		ModelAndView mv = new ModelAndView("helloworld");
-		List<Pizza> pizzas = pizzaDAO.findAll();
-		System.out.println(pizzas.get(0).getName());
-	    mv.addObject("pizzas", pizzas);
+//		List<Usuario> Usuario = UsuarioDAO.findAll();
+//	    mv.addObject("usuarios", Usuario);
 		
 		mv.addObject("message", message);
 		mv.addObject("name", name);

@@ -1,4 +1,4 @@
-package HelloWorldController;
+package Java;
 
 import java.util.List;
 

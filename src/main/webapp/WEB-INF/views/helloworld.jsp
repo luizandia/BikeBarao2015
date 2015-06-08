@@ -13,11 +13,12 @@
 			${message} ${name}
 		</h2>
 	</center>
-	<h1>List of All Pizzas</h1>
+<%-- 	<h1>List of All Localizaoes</h1>
     <ul>
-        <c:forEach var="p" items="${pizzas}">
-            <li>${p.name} - ${p.price}</li>
+        <c:forEach var="l" items="${pizza}">
+            <li>${l.cep} - ${p.rua} - ${p.bairro} - ${p.cidade}</li>
+            
         </c:forEach>
-    </ul>
+    </ul> --%>
 </body>
 </html>

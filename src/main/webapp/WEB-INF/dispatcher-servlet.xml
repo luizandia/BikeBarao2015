@@ -17,13 +17,13 @@
   </bean>
    
   <!-- Scan classpath for annotations (eg: @Service, @Repository etc) -->
-  <context:component-scan base-package="HelloWorldController"/>
+  <context:component-scan base-package="Java"/>
    
   <!-- JDBC Data Source. It is assumed you have MySQL running on localhost port 3306 with 
        username root and blank password. Change below if it's not the case -->
   <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://localhost:3306/pizzashop"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/BikeBarao"/>
     <property name="username" value="root"/>
     <property name="password" value=""/>
     <property name="validationQuery" value="SELECT 1"/>
@@ -34,7 +34,7 @@
     <property name="dataSource" ref="myDataSource"/>
     <property name="packagesToScan">
       <array>
-        <value>HelloWorldController</value>
+        <value>Java</value>
       </array>
     </property>
     <property name="hibernateProperties">
