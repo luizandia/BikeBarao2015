@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8">
     <title>BikeBarão - 2015</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
   </head>
   <body>
     <div class="title-wrapper">
@@ -15,12 +15,11 @@
     </div>
     <div class="top-menu">
       <ul>
-     
-        <li class="active">Usuários</li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <<li><a href="estacoes.html">Estações</a></li>
-        <li><a href="fornecedores.html">Fornecedores</a></li>
-        <li><a href="alugueis.html">Aluguéis</a></li>
+       	<li><a href="usuarios">Usuários</a></li>
+        <li><a href="bicicletas">Bicicletas</a></li>
+        <li><a href="estacoes">Estações</a></li>
+        <li><a href="fornecedores">Fornecedores</a></li>
+        <li><a href="alugueis">Aluguéis</a></li>
       </ul>
     </div>
     <div class="body-wrapper">
@@ -38,12 +37,14 @@
             <th>Data Nasc.</th>
             <th>Número Cartão</th>
           </tr>
-          <tr>
-            <td>430.323.234-32</td>
-            <td>Frangoni Guegs</td>
-            <td>20/20/20</td>
-            <td>304932</td>
-          </tr>
+          <c:forEach var="user" items="${usuarios}">
+          	<tr>
+	          	<td>${user.cpf}</td>
+	            <td>${user.nome}</td>
+	            <td>${user.data_nascimento}</td>
+	            <td>${user.cartao.numero}</td>
+          	</tr>
+		  </c:forEach>
         </table>
       </div>
     </div>

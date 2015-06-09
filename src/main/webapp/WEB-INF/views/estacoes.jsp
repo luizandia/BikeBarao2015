@@ -5,28 +5,27 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BikeBarÃ£o - 2015</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>BikeBarão - 2015</title>
+    <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
   </head>
   <body>
     <div class="title-wrapper">
-      <a href="index.html">Bike<strong>BarÃ£o</strong></a>
+      <a href="index.html">Bike<strong>Barão</strong></a>
     </div>
     <div class="top-menu">
       <ul>
-     
-        <li><a href="usuarios.html">Usuarios</a></li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <li class="active">EstaÃ§Ãµes</li>
-        <li><a href="fornecedores.html">Fornecedores</a></li>
-        <li><a href="alugueis.html">AluguÃ©is</a></li>
+       	<li><a href="usuarios">Usuários</a></li>
+        <li><a href="bicicletas">Bicicletas</a></li>
+        <li><a href="estacoes">Estações</a></li>
+        <li><a href="fornecedores">Fornecedores</a></li>
+        <li><a href="alugueis">Aluguéis</a></li>
       </ul>
     </div>
     <div class="body-wrapper">
       <div class="side-menu">
         <ul>
-          <li><a href="#">EstaÃ§Ãµes</a></li>
-          <li><a href="#">EstaÃ§Ãµes c/ bicicletas quebradas</a></li>
+          <li><a href="#">Estações</a></li>
+          <li><a href="#">Estações c/ bicicletas quebradas</a></li>
         </ul>
       </div>
       <div class="content-wrapper">
@@ -36,15 +35,17 @@
             <th>Qtd</th>
             <th>Qtd Ocupada</th>
             <th>CEP</th>
-            <th>NÃºm</th>
+            <th>Num</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>30</td>
-            <td>10</td>
-            <td>14802-195</td>
-            <td>3</td>
-          </tr>
+           <c:forEach var="est" items="${estacoes}">
+          	<tr>
+	          	<td>${est.id}</td>
+	            <td>${est.qtd_armazenamento}</td>
+	            <td>${est.qtd_ocupada}</td>
+	            <td>${est.localizacao.cep}</td>
+	            <td>${est.num}</td>
+          	</tr>
+		  </c:forEach>
         </table>
       </div>
     </div>

@@ -10,13 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class CartaoDAO {
+public class CartaoDAO extends BaseDAO<Cartao>{
   @Autowired private SessionFactory sessionFactory;
-   
-  @Transactional
-  public List<Cartao> findAll() {
-    Session session = sessionFactory.getCurrentSession();
-    List Cartoes = session.createQuery("from cartao").list();
-    return Cartoes;
-  }
+
 }

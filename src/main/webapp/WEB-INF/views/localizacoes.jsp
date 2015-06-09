@@ -14,12 +14,11 @@
     </div>
     <div class="top-menu">
       <ul>
-     
-        <li><a href="usuarios.html">Usuarios</a></li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <li><a href="estacoes.html">Estações</a></li>
-        <li><a href="estacoes.html">Fornecedores</a></li>
-        <li><a href="alugueis.html">Aluguéis</a></li>
+     	<li><a href="BikeBarao/usuarios">Usuários</a></li>
+        <li><a href="BikeBarao/bicicletas">Bicicletas</a></li>
+        <li><a href="BikeBarao/estacoes">Estações</a></li>
+        <li><a href="BikeBarao/fornecedores">Fornecedores</a></li>
+        <li><a href="BikeBarao/alugueis">Aluguéis</a></li>
       </ul>
     </div>
     <div class="body-wrapper">

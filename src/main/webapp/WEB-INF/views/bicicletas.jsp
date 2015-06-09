@@ -5,21 +5,20 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BikeBar√£o - 2015</title>
+    <title>BikeBar„o - 2015</title>
     <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
   </head>
   <body>
     <div class="title-wrapper">
-      <a href="index.html">Bike<strong>Bar√£o</strong></a>
+      <a href="index.html">Bike<strong>Bar„o</strong></a>
     </div>
     <div class="top-menu">
       <ul>
-     
-        <li><a href="usuarios.html">Usuarios</a></li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <li><a href="estacoes.html">Esta√ß√µes</a></li>
-        <li><a href="fornecedores.html">Fornecedores</a></li>
-        <li><a href="alugueis.html">Alugu√©is</a></li>
+     	<li><a href="usuarios">Usu·rios</a></li>
+        <li><a href="bicicletas">Bicicletas</a></li>
+        <li><a href="estacoes">EstaÁıes</a></li>
+        <li><a href="fornecedores">Fornecedores</a></li>
+        <li><a href="alugueis">AluguÈis</a></li>
       </ul>
     </div>
     <div class="body-wrapper">
@@ -38,37 +37,19 @@
             <th>Estado</th>
             <th>Ativa</th>
             <th>CNPJ Forn</th>
-            <th>Esta√ß√£o</th>
+            <th>EstaÁ„o</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Pequena</td>
-            <td>Caloi</td>
-            <td>Funcionando</td>
-            <td>Ativa</td>
-            <td>8.394.320-2</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Grande</td>
-            <td>Caloi</td>
-            <td>Funcionando</td>
-            <td>Ativa</td>
-            <td>8.394.320-2</td>
-            <td>3</td>
-          </tr>
-          <tr>
           <c:forEach var="bike" items="${bicicletas}">
-          	<td>${bike.id}</td>
-            <td>${bike.tamanho}</td>
-            <td>${bike.modelo}</td>
-            <td>${bike.estado}</td>
-            <td>${bike.ativo}</td>
-            <td>${bike.fornecedor.id}</td>
-            <td>${bike.estacao.id}</td>
+	          <tr>
+	          	<td>${bike.id}</td>
+	            <td>${bike.tamanho}</td>
+	            <td>${bike.modelo}</td>
+	            <td>${bike.estado}</td>
+	            <td>${bike.ativo}</td>
+	            <td>${bike.fornecedor.id}</td>
+	            <td>${bike.estacao.id}</td>
+	          </tr>
 		  </c:forEach>
-          </tr>
         </table>
       </div>
     </div>

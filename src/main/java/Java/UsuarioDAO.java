@@ -10,13 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class UsuarioDAO {
+public class UsuarioDAO extends BaseDAO<Usuario> {
   @Autowired private SessionFactory sessionFactory;
    
-  @Transactional
-  public List<Usuario> findAll() {
-    Session session = sessionFactory.getCurrentSession();
-    List Usuarios = session.createQuery("from usuarios").list();
-    return Usuarios;
-  }
 }

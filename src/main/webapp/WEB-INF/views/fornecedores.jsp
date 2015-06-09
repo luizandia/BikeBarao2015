@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8">
     <title>BikeBarão - 2015</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
   </head>
   <body>
     <div class="title-wrapper">
@@ -14,11 +14,11 @@
     </div>
     <div class="top-menu">
       <ul>
-        <li><a href="usuarios.html">Usuários</a></li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <li><a href="estacoes.html">Estações</a></li>
-        <li class="active">Fornecedores</li>
-        <li><a href="alugueis.html">Aluguéis</a></li>
+        <li><a href="usuarios">Usuários</a></li>
+        <li><a href="bicicletas">Bicicletas</a></li>
+        <li><a href="estacoes">Estações</a></li>
+        <li><a href="fornecedores">Fornecedores</a></li>
+        <li><a href="alugueis">Aluguéis</a></li>
       </ul>
     </div>
     <div class="body-wrapper">
@@ -32,15 +32,13 @@
           <tr>
             <th>CPF</th>
             <th>Nome</th>
-            <th>Data Nasc.</th>
-            <th>Número Cartão</th>
           </tr>
-          <tr>
-            <td>430.323.234-32</td>
-            <td>Frangoni Guegs</td>
-            <td>20/20/20</td>
-            <td>304932</td>
-          </tr>
+          <c:forEach var="forn" items="${fornecedores}">
+          	<tr>
+	          	<td>${forn.cnpj}</td>
+	            <td>${forn.nome}</td>
+          	</tr>
+		  </c:forEach>
         </table>
       </div>
     </div>

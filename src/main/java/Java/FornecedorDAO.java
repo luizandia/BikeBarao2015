@@ -10,13 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class FornecedorDAO {
+public class FornecedorDAO extends BaseDAO<Fornecedor>{
   @Autowired private SessionFactory sessionFactory;
    
-  @Transactional
-  public List<Fornecedor> findAll() {
-    Session session = sessionFactory.getCurrentSession();
-    List Fornecedores = session.createQuery("from fornecedores").list();
-    return Fornecedores;
-  }
+//  @Transactional
+//  public List<Fornecedor> findAll() {
+//    Session session = sessionFactory.getCurrentSession();
+//    List Fornecedores = session.createQuery("from fornecedores").list();
+//    return Fornecedores;
+//  }
 }

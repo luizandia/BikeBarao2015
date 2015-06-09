@@ -10,13 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class LocalizacaoDAO {
+public class LocalizacaoDAO extends BaseDAO<Localizacao>{
   @Autowired private SessionFactory sessionFactory;
    
-  @Transactional
-  public List<Localizacao> findAll() {
-    Session session = sessionFactory.getCurrentSession();
-    List Localizacoes = session.createQuery("from Localizacao").list();
-    return Localizacoes;
-  }
+//  @Transactional
+//  public List<Localizacao> findAll() {
+//    Session session = sessionFactory.getCurrentSession();
+//    List Localizacoes = session.createQuery("from Localizacao").list();
+//    return Localizacoes;
+//  }
 }

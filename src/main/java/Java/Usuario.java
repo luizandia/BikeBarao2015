@@ -1,12 +1,11 @@
 package Java;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.sun.istack.internal.NotNull;
@@ -24,9 +23,9 @@ public class Usuario {
 	
 	private Date data_nascimento;
 	
-	@OneToMany
+	@OneToOne
 	@JoinColumn(name = "numero_cartao")
-	private List<Cartao> cartao;
+	private Cartao cartao;
 
 	public String getCpf() {
 		return cpf;
@@ -52,11 +51,11 @@ public class Usuario {
 		this.data_nascimento = data_nascimento;
 	}
 
-	public List<Cartao> getCartao() {
+	public Cartao getCartao() {
 		return cartao;
 	}
 
-	public void setCartao(List<Cartao> cartao) {
+	public void setCartao(Cartao cartao) {
 		this.cartao = cartao;
 	}
 

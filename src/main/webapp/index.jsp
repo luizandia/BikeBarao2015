@@ -1,24 +1,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BikeBar√£o - 2015</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>BikeBar„o - 2015</title>
+    <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
   </head>
    <body>
     <div class="title-wrapper">
-      <a href="index.html">Bike<strong>Bar√£o</strong></a>
+      <a href="index.html">Bike<strong>Bar„o</strong></a>
     </div>
     <div class="top-menu">
       <ul>
-        <li><a href="usuarios.html">Usu√°rios</a></li>
-        <li><a href="bicicletas.html">Bicicletas</a></li>
-        <li><a href="estacoes.html">Esta√ß√µes</a></li>
-        <li><a href="fornecedores.html">Fornecedores</a></li>
-        <li><a href="alugueis.html">Alugu√©is</a></li>
+        <li><a href="usuarios">Usu·rios</a></li>
+        <li><a href="bicicletas">Bicicletas</a></li>
+        <li><a href="estacoes">EstaÁıes</a></li>
+        <li><a href="fornecedores">Fornecedores</a></li>
+        <li><a href="alugueis">AluguÈis</a></li>
       </ul>
     </div>
     <div class="link-wrapper">
-      <h1>Bem vindo ao BikeBar√£o</h1>
+      <h1>Bem vindo ao BikeBar„o</h1>
     </div>
   </body>
 </html>
