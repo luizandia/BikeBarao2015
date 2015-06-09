@@ -3,61 +3,56 @@ package Java;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+
+import com.sun.istack.internal.NotNull;
 
 
 @Entity
 @Table(name = "Localizacao")
 public class Localizacao {
-  
-	@Id @GeneratedValue private long id;
-
-	private String CEP;
 	
-	private String RUA;
+	@Id
+	@NotNull
+	private String cep;
 	
-	private String BAIRRO;
+	private String rua;
 	
-	private String CIDADE;
+	private String bairro;
+	
+	private String cidade;
 
-	public long getId() {
-		return id;
+	public String getCep() {
+		return cep;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
-	public String getCEP() {
-		return CEP;
+	public String getRua() {
+		return rua;
 	}
 
-	public void setCEP(String CEP) {
-		this.CEP = CEP;
+	public void setRua(String rua) {
+		this.rua = rua;
 	}
 
-	public String getRUA() {
-		return RUA;
+	public String getBairro() {
+		return bairro;
 	}
 
-	public void setRUA(String RUA) {
-		this.RUA = RUA;
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
 	}
 
-	public String getBAIRRO() {
-		return BAIRRO;
+	public String getCidade() {
+		return cidade;
 	}
 
-	public void setBAIRRO(String BAIRRO) {
-		this.BAIRRO = BAIRRO;
-	}
-
-	public String getCIDADE() {
-		return CIDADE;
-	}
-
-	public void setCIDADE(String CIDADE) {
-		this.CIDADE = CIDADE;
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 
 }

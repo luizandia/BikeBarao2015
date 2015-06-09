@@ -9,6 +9,8 @@
  
   <!-- Enable @Controller annotation support -->
   <mvc:annotation-driven />
+  
+  <mvc:resources mapping="/resources/**" location="classpath:/resources" />
  
   <!-- Map simple view name such as "test" into /WEB-INF/test.jsp -->
   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -40,6 +42,11 @@
     <property name="hibernateProperties">
       <value>
         hibernate.dialect=org.hibernate.dialect.MySQLDialect
+      </value>
+    </property>
+    <property name="mappingLocations">
+      <value>
+		/WEB-INF/classes/hibernate.cfg.xml
       </value>
     </property>
   </bean>

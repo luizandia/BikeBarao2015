@@ -10,13 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class BicicletaDAO {
+public class BicicletaDAO extends BaseDAO<Bicicleta> {
   @Autowired private SessionFactory sessionFactory;
    
-  @Transactional
-  public List<Bicicleta> findAll() {
-    Session session = sessionFactory.getCurrentSession();
-    List Bicicletas = session.createQuery("from bicicleta").list();
-    return Bicicletas;
-  }
+//  @Transactional
+//  public List<Bicicleta> findAll() {
+//    Session session = sessionFactory.getCurrentSession();
+//    List Bicicletas = session.createQuery("from bicicleta").list();
+//    return Bicicletas;
+//  }
 }
