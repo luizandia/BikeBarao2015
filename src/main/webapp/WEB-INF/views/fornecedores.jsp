@@ -30,7 +30,7 @@
       <div class="content-wrapper">
         <table>
           <tr>
-            <th>CPF</th>
+            <th>CNPJ</th>
             <th>Nome</th>
           </tr>
           <c:forEach var="forn" items="${fornecedores}">

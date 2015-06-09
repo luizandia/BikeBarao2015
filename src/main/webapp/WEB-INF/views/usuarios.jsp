@@ -34,15 +34,11 @@
           <tr>
             <th>CPF</th>
             <th>Nome</th>
-            <th>Data Nasc.</th>
-            <th>Número Cartão</th>
           </tr>
           <c:forEach var="user" items="${usuarios}">
           	<tr>
-	          	<td>${user.cpf}</td>
+	          	<td><a href="/BikeBarao/usuarios/${user.cpf}">${user.cpf}</a></td>
 	            <td>${user.nome}</td>
-	            <td>${user.data_nascimento}</td>
-	            <td>${user.cartao.numero}</td>
           	</tr>
 		  </c:forEach>
         </table>

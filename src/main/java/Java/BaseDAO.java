@@ -63,11 +63,13 @@ public abstract class BaseDAO<T> {
 	     * Use this inside subclasses as a convenience method. 
 	     */  
 	    @SuppressWarnings("unchecked")  
-	    protected List<T> findByCriteria(Criterion... criterion) {  
+	    protected List<T> findByCriteria(Criterion... criterion) { 
+	    	beginTransaction();
 	    	Criteria crit = HibernateUtils.getSession().createCriteria(getPersistentClass());  
 	    	for (Criterion c : criterion) {  
 	    		crit.add(c);  
 	    	}  
+	    	commitTransaction();
 	    	return crit.list();  
 	    }  
 	    

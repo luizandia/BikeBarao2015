@@ -1,14 +1,11 @@
 package Java;
 
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -41,6 +38,13 @@ public class PrincipalWebControlller {
 		return mv;
 	}
 	
+	@RequestMapping(value="/usuarios/{cpf}", method = RequestMethod.GET)
+	public ModelAndView showUser(@PathVariable String cpf) {
+		ModelAndView mv = new ModelAndView("usuario");
+		mv.addObject("user", usuarioDAO.findByCpf(cpf));
+		return mv;
+	}
+	
 	@RequestMapping("/estacoes")
 	public ModelAndView showEstacoes() {
 		ModelAndView mv = new ModelAndView("estacoes");
@@ -54,5 +58,12 @@ public class PrincipalWebControlller {
 		mv.addObject("fornecedores", fornecedorDAO.findAll());
 		return mv;
 	}
+	
+//	@RequestMapping("/alugueis")
+//	public ModelAndView alugueis() {
+//		ModelAndView mv = new ModelAndView("alugueis");
+//		mv.addObject("alugueis", fornecedorDAO.findAll());
+//		return mv;
+//	}
 
 }
