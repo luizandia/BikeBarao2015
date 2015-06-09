@@ -18,7 +18,7 @@
         <li><a href="usuarios.html">Usuarios</a></li>
         <li><a href="bicicletas.html">Bicicletas</a></li>
         <li><a href="estacoes.html">Estações</a></li>
-        <li><a href="estacoes.html">Fornecedores</a></li>
+        <li><a href="fornecedores.html">Fornecedores</a></li>
         <li><a href="alugueis.html">Aluguéis</a></li>
       </ul>
     </div>
@@ -58,6 +58,7 @@
             <td>8.394.320-2</td>
             <td>3</td>
           </tr>
+          <tr>
           <c:forEach var="bike" items="${bicicletas}">
           	<td>${bike.id}</td>
             <td>${bike.tamanho}</td>
@@ -67,6 +68,7 @@
             <td>${bike.fornecedor.id}</td>
             <td>${bike.estacao.id}</td>
 		  </c:forEach>
+          </tr>
         </table>
       </div>
     </div>
