@@ -9,39 +9,58 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "estacao")
+@Table(name = "Estacao")
 public class Estacao {
-	@Id @GeneratedValue private long id;
+	@Id @GeneratedValue private String id;
 	  
-	private Integer quantidade;
-	  
+	private String qtd_armazenamento;
+	
+	private String qtd_ocupada;
+	
+	private String num;
+	
 	@OneToOne
-	@JoinColumn(name = "id_localizacao")
+	@JoinColumn(name = "cep")
 	private Localizacao localizacao;
+	
+	public String getQtd_armazenamento() {
+		return qtd_armazenamento;
+	}
 
-	public long getId() {
-		return id;
+	public void setQtd_armazenamento(String qtd_armazenamento) {
+		this.qtd_armazenamento = qtd_armazenamento;
 	}
-	
-	public void setId(long id) {
-		this.id = id;
+
+	public String getQtd_ocupada() {
+		return qtd_ocupada;
 	}
-	
-	public Integer getQuantidade() {
-		return quantidade;
+
+	public void setQtd_ocupada(String qtd_ocupada) {
+		this.qtd_ocupada = qtd_ocupada;
 	}
-	
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
+
+	public String getNum() {
+		return num;
 	}
-	
+
+	public void setNum(String num) {
+		this.num = num;
+	}
+
 	public Localizacao getLocalizacao() {
 		return localizacao;
 	}
-	
+
 	public void setLocalizacao(Localizacao localizacao) {
 		this.localizacao = localizacao;
 	}
-	  
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 	  
 }

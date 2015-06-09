@@ -13,7 +13,7 @@ import com.sun.istack.internal.NotNull;
 
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "Usuario")
 public class Usuario {
 	
 	@Id
@@ -22,10 +22,10 @@ public class Usuario {
 	
 	private String nome;
 	
-	private Date nascimento;
+	private Date data_nascimento;
 	
 	@OneToMany
-	@JoinColumn(name = "user_cpf")
+	@JoinColumn(name = "numero_cartao")
 	private List<Cartao> cartao;
 
 	public String getCpf() {
@@ -44,12 +44,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public Date getNascimento() {
-		return nascimento;
+	public Date getData_nascimento() {
+		return data_nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
+	public void setData_nascimento(Date data_nascimento) {
+		this.data_nascimento = data_nascimento;
 	}
 
 	public List<Cartao> getCartao() {

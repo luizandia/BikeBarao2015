@@ -9,13 +9,13 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "cartao")
+@Table(name = "Cartao")
 public class Cartao {
 	@Id
 	@GeneratedValue
-	private long numero;
+	private String numero;
 	
-	private Double saldo;
+	private String saldo;
 	
 	private String estado;
 	
@@ -23,19 +23,19 @@ public class Cartao {
 	
 	private Date validade;
 
-	public long getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(long numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 
-	public Double getSaldo() {
+	public String getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(Double saldo) {
+	public void setSaldo(String saldo) {
 		this.saldo = saldo;
 	}
 

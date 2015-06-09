@@ -9,9 +9,9 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "bicicleta")
+@Table(name = "Bicicleta")
 public class Bicicleta {
-	@Id @GeneratedValue private long id;
+	@Id @GeneratedValue private String id;
 	
 	private String tamanho;
 	
@@ -22,18 +22,18 @@ public class Bicicleta {
 	private boolean ativo;
 	
 	@ManyToOne
-	@JoinColumn(name = "fornecedor_id")
+	@JoinColumn(name = "cnpj_fornecedor")
 	private Fornecedor fornecedor;
 	
 	@ManyToOne
-	@JoinColumn(name = "estacao_id")
+	@JoinColumn(name = "id_estacao")
 	private Estacao estacao;
 
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -84,4 +84,6 @@ public class Bicicleta {
 	public void setEstacao(Estacao estacao) {
 		this.estacao = estacao;
 	}
+
+
 }

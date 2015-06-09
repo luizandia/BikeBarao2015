@@ -10,7 +10,7 @@ import com.sun.istack.internal.NotNull;
 
 
 @Entity
-@Table(name = "fornecedor")
+@Table(name = "Fornecedor")
 public class Fornecedor {
 	@Id
 	@NotNull

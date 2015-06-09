@@ -14,20 +14,23 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PrincipalWebControlller {
 	@Autowired private BicicletaDAO bicicletaDAO = new BicicletaDAO();
-	@Autowired private CartaoDAO cartaoDAO;
-	@Autowired private EstacaoDAO estacaoDAO;
-	@Autowired private FornecedorDAO fornecedorDAO;
-	@Autowired private LocalizacaoDAO localizacaoDAO;
-	@Autowired private UsuarioDAO usuarioDAO;
+	@Autowired private CartaoDAO cartaoDAO = new CartaoDAO();
+	@Autowired private EstacaoDAO estacaoDAO = new EstacaoDAO();;
+	@Autowired private FornecedorDAO fornecedorDAO = new FornecedorDAO();
+	@Autowired private LocalizacaoDAO localizacaoDAO = new LocalizacaoDAO();
+	@Autowired private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	
-	String message = "Welcome to Spring MVC!";
- 
 	@RequestMapping("/bicicletas")
-	public ModelAndView showMessage(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
+	public ModelAndView showBikes() {
 		ModelAndView mv = new ModelAndView("bicicletas");
-
 		mv.addObject("bicicletas", bicicletaDAO.findAll());
-//		mv.addObject("name", name);
+		return mv;
+	}
+	
+	@RequestMapping("/localizacoes")
+	public ModelAndView showLocalizacoes() {
+		ModelAndView mv = new ModelAndView("localizacoes");
+		mv.addObject("localizacoes", localizacaoDAO.findAll());
 		return mv;
 	}
 
