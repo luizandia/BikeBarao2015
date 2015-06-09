@@ -1,22 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BikeBar�o - 2015</title>
-    <link rel="stylesheet" type="text/css" href="/BikeBarao/resources/style.css">
+    <title>BikeBarão - 2015</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
+   <body>
     <div class="title-wrapper">
-      <a href="index.html">Bike<strong>Bar�o</strong></a>
+      <a href="index.html">Bike<strong>Barão</strong></a>
     </div>
-    <div class="body-wrapper">
-      <br /><strong>O que voc� deseja fazer?</strong> <br/>
-      <div class="link-wrapper">
-        <a class="main-link" href="register.html">Criar conta</a><br/>
-        <a class="main-link" href="login.html">Acessar conta</a><br/>
-      </div>
+    <div class="top-menu">
+      <ul>
+        <li><a href="usuarios.html">Usuários</a></li>
+        <li><a href="bicicletas.html">Bicicletas</a></li>
+        <li><a href="estacoes.html">Estações</a></li>
+        <li><a href="fornecedores.html">Fornecedores</a></li>
+        <li><a href="alugueis.html">Aluguéis</a></li>
+      </ul>
+    </div>
+    <div class="link-wrapper">
+      <h1>Bem vindo ao BikeBarão</h1>
     </div>
   </body>
 </html>
