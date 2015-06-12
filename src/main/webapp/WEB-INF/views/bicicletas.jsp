@@ -36,7 +36,7 @@
             <th>Modelo</th>
             <th>Estado</th>
             <th>Ativa</th>
-            <th>CNPJ Forn</th>
+            <th>CNPJ Fornecedor</th>
             <th>Estação</th>
           </tr>
           <c:forEach var="bike" items="${bicicletas}">
@@ -46,7 +46,7 @@
 	            <td>${bike.modelo}</td>
 	            <td>${bike.estado}</td>
 	            <td>${bike.ativo}</td>
-	            <td>${bike.fornecedor.id}</td>
+	            <td>${bike.fornecedor.cnpj}</td>
 	            <td>${bike.estacao.id}</td>
 	          </tr>
 		  </c:forEach>

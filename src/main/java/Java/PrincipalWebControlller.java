@@ -16,6 +16,7 @@ public class PrincipalWebControlller {
 	@Autowired private FornecedorDAO fornecedorDAO = new FornecedorDAO();
 	@Autowired private LocalizacaoDAO localizacaoDAO = new LocalizacaoDAO();
 	@Autowired private UsuarioDAO usuarioDAO = new UsuarioDAO();
+	@Autowired private AluguelDAO aluguelDAO = new AluguelDAO();
 	
 	@RequestMapping("/bicicletas")
 	public ModelAndView showBikes() {
@@ -59,11 +60,13 @@ public class PrincipalWebControlller {
 		return mv;
 	}
 	
-//	@RequestMapping("/alugueis")
-//	public ModelAndView alugueis() {
-//		ModelAndView mv = new ModelAndView("alugueis");
-//		mv.addObject("alugueis", fornecedorDAO.findAll());
-//		return mv;
-//	}
+	@RequestMapping("/alugueis")
+	public ModelAndView alugueis() {
+		ModelAndView mv = new ModelAndView("aluguel");
+		mv.addObject("usuarios", usuarioDAO.findAll());
+		mv.addObject("alugueis", aluguelDAO.findAll());
+		mv.addObject("bicicletas", bicicletaDAO.findAll());
+		return mv;
+	}
 
 }
