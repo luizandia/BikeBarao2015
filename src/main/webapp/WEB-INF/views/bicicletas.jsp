@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="body-wrapper">
-      <div class="side-menu">
+      <div class="side-menu" style="height: 1000px;">
         <ul>
           <li><a href="#">Listar bicicletas</a></li>
           <li><a href="#">Listar bicicletas quebradas</a></li>
@@ -38,8 +38,35 @@
             <th>Ativa</th>
             <th>CNPJ Fornecedor</th>
             <th>Estação</th>
+            <th>Num Alugueis</th>
           </tr>
           <c:forEach var="bike" items="${bicicletas}">
+	          <tr>
+	          	<td>${bike.id}</td>
+	            <td>${bike.tamanho}</td>
+	            <td>${bike.modelo}</td>
+	            <td>${bike.estado}</td>
+	            <td>${bike.ativo}</td>
+	            <td>${bike.fornecedor.cnpj}</td>
+	            <td>${bike.estacao.id}</td>
+	            <td>${bike.numAlugueis}</td>
+	          </tr>
+		  </c:forEach>
+        </table>
+      </div>
+      <%--
+      <div class="content-wrapper">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Tamanho</th>
+            <th>Modelo</th>
+            <th>Estado</th>
+            <th>Ativa</th>
+            <th>CNPJ Fornecedor</th>
+            <th>Estação</th>
+          </tr>
+          <c:forEach var="bike" items="${bicicletasConserto}">
 	          <tr>
 	          	<td>${bike.id}</td>
 	            <td>${bike.tamanho}</td>
@@ -52,6 +79,7 @@
 		  </c:forEach>
         </table>
       </div>
+       --%>
     </div>
   </body>
 </html>

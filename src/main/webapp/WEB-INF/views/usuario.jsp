@@ -45,6 +45,7 @@
         </table>
       </div>
       <div class="content-wrapper">
+      	<h3>Alugueis deste usuário</h3>
         <table>
           <tr>
             <th>ID</th>

@@ -24,6 +24,17 @@ public class AluguelDAO extends BaseDAO<Aluguel> {
 	  return lista;
   }
   
+  public Integer getNumAlugueisByBike(String id){
+	  Session session = HibernateUtils.getSession();
+	  
+	  SQLQuery query = session.createSQLQuery("SELECT * from Aluguel where id_bicicleta = " + id);
+	  query.addEntity(Aluguel.class);
+	  List<Aluguel> lista = query.list();
+	  if(lista != null && lista.size() > 0)
+		  return lista.size();
+	  return 0;
+  }
+  
   
 //  @Transactional
 //  public List<Bicicleta> findAll() {

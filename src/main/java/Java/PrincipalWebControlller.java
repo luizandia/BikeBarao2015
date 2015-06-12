@@ -23,7 +23,14 @@ public class PrincipalWebControlller {
 	@RequestMapping("/bicicletas")
 	public ModelAndView showBikes() {
 		ModelAndView mv = new ModelAndView("bicicletas");
-		mv.addObject("bicicletas", bicicletaDAO.findAll());
+		
+		List<Bicicleta> bikes = bicicletaDAO.findAll();
+		for(Bicicleta b : bikes){
+			b.setNumAlugueis(aluguelDAO.getNumAlugueisByBike(b.getId()));
+		}
+		
+		mv.addObject("bicicletas", bikes);
+		mv.addObject("bicicletasConserto", bicicletaDAO.getBicicletasEmConserto());
 		return mv;
 	}
 	

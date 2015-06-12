@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -28,6 +29,9 @@ public class Bicicleta {
 	@ManyToOne
 	@JoinColumn(name = "id_estacao")
 	private Estacao estacao;
+	
+	@Transient
+	private Integer numAlugueis;
 
 	public String getId() {
 		return id;
@@ -83,6 +87,14 @@ public class Bicicleta {
 
 	public void setEstacao(Estacao estacao) {
 		this.estacao = estacao;
+	}
+
+	public Integer getNumAlugueis() {
+		return numAlugueis;
+	}
+
+	public void setNumAlugueis(Integer numAlugueis) {
+		this.numAlugueis = numAlugueis;
 	}
 
 

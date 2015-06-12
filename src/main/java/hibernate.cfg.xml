@@ -22,6 +22,7 @@
 		<mapping class="Java.Localizacao" />
 		<mapping class="Java.Usuario" />
 		<mapping class="Java.Aluguel" />
+		<mapping class="Java.Conserta" />
 		
 	</session-factory>
 </hibernate-configuration>
