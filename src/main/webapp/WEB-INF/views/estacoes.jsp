@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="body-wrapper">
-      <div class="side-menu">
+      <div class="side-menu" style="height: 700px;">
         <ul>
           <li><a href="#">Estações</a></li>
           <li><a href="#">Estações c/ bicicletas quebradas</a></li>
@@ -44,6 +44,19 @@
 	            <td>${est.qtd_ocupada}</td>
 	            <td>${est.localizacao.cep}</td>
 	            <td>${est.num}</td>
+          	</tr>
+		  </c:forEach>
+        </table>
+      </div>
+      <div class="content-wrapper">
+      	<h3>Estações c/ bicicletas quebradas</h3>
+        <table>
+          <tr>
+            <th>ID</th>
+          </tr>
+           <c:forEach var="est" items="${estacoesDefeito}">
+          	<tr>
+	          	<td>${est.id}</td>
           	</tr>
 		  </c:forEach>
         </table>

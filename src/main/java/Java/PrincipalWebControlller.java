@@ -1,6 +1,8 @@
 package Java;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,6 +45,7 @@ public class PrincipalWebControlller {
 	public ModelAndView showUser(@PathVariable String cpf) {
 		ModelAndView mv = new ModelAndView("usuario");
 		mv.addObject("user", usuarioDAO.findByCpf(cpf));
+		mv.addObject("alugueis", aluguelDAO.getAlugueisByClient(cpf));
 		return mv;
 	}
 	
@@ -50,6 +53,7 @@ public class PrincipalWebControlller {
 	public ModelAndView showEstacoes() {
 		ModelAndView mv = new ModelAndView("estacoes");
 		mv.addObject("estacoes", estacaoDAO.findAll());
+		mv.addObject("estacoesDefeito", estacaoDAO.getEstacaoBiciletaDefeito());
 		return mv;
 	}
 	
@@ -64,7 +68,8 @@ public class PrincipalWebControlller {
 	public ModelAndView alugueis() {
 		ModelAndView mv = new ModelAndView("aluguel");
 		mv.addObject("usuarios", usuarioDAO.findAll());
-		mv.addObject("alugueis", aluguelDAO.findAll());
+		List<Aluguel> alugueis = aluguelDAO.findAll();
+		mv.addObject("alugueis", alugueis);
 		mv.addObject("bicicletas", bicicletaDAO.findAll());
 		return mv;
 	}

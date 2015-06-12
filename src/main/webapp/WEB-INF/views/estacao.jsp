@@ -28,38 +28,22 @@
           <li><a href="#">Listar bicicletas quebradas</a></li>
         </ul>
       </div>
-<!--       <div class="content-wrapper"> -->
-<!--       	<form action="/novoAluguel"> -->
-<!--       		<select> -->
-<%-- 	      		<c:forEach var="user" items="${usuarios}"> --%>
-<%-- 		      		<option>${user.nome}</option> --%>
-<%-- 				</c:forEach> --%>
-<%-- 				<c:forEach var="bike" items="${bicicletas}"> --%>
-<%-- 		      		<option>${bike.id}</option> --%>
-<%-- 				</c:forEach> --%>
-<!--       		</select> -->
-<!--       	</form> -->
-<!--       </div> -->
       <div class="content-wrapper">
         <table>
           <tr>
             <th>ID</th>
-            <th>Id Bicicleta</th>
-            <th>Nome Usuario</th>
-            <th>Data Inicio</th>
-            <th>Data Fim</th>
-            <th>Num Estacao Inicio</th>
-            <th>Num Estacao Fim</th>
+            <th>Tamanho</th>
+            <th>Modelo</th>
+            <th>Estado</th>
+            <th>Ativa</th>
           </tr>
-          <c:forEach var="aluguel" items="${alugueis}">
+          <c:forEach var="bike" items="${bicicletas}">
 	          <tr>
-	          	<td>${aluguel.id}</td>
-	            <td>${aluguel.bicicleta.id}</td>
-	            <td>${aluguel.usuario.nome}</td>
-	            <td>${aluguel.data_inicio}</td>
-	            <td>${aluguel.data_fim}</td>
-	            <td>${aluguel.estacaoInicio.id}</td>
-	            <td>${aluguel.estacaoFim.id}</td>
+	          	<td>${bike.id}</td>
+	            <td>${bike.tamanho}</td>
+	            <td>${bike.modelo}</td>
+	            <td>${bike.estado}</td>
+	            <td>${bike.ativo}</td>
 	          </tr>
 		  </c:forEach>
         </table>

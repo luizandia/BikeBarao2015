@@ -2,7 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-
 <html>
   <head>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
       </ul>
     </div>
     <div class="body-wrapper">
-      <div class="side-menu">
+      <div class="side-menu" style="height: 700px;">
         <ul>
           <li><a href="#">Listar CPF e Nome</a></li>
           <li><a href="#">Listar todas infos</a></li>
@@ -43,6 +42,30 @@
 	          	<td>${user.data_nascimento}</td>
 	         	<td>${user.cartao.numero}</td>
 	       	</tr>
+        </table>
+      </div>
+      <div class="content-wrapper">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Id Bicicleta</th>
+            <th>Nome Usuario</th>
+            <th>Data Inicio</th>
+            <th>Data Fim</th>
+            <th>Num Estacao Inicio</th>
+            <th>Num Estacao Fim</th>
+          </tr>
+          <c:forEach var="aluguel" items="${alugueis}">
+	          <tr>
+	          	<td>${aluguel.id}</td>
+	            <td>${aluguel.bicicleta.id}</td>
+	            <td>${aluguel.usuario.nome}</td>
+	            <td>${aluguel.data_inicio}</td>
+	            <td>${aluguel.data_fim}</td>
+	            <td>${aluguel.estacaoInicio.id}</td>
+	            <td>${aluguel.estacaoFim.id}</td>
+	          </tr>
+		  </c:forEach>
         </table>
       </div>
     </div>
